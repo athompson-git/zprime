@@ -138,11 +138,11 @@ void DiTauAnalyzer(const char *file_name, const char *sample_desc, int nbins,
 
   // Book 2D histograms for exploratory analysis.
   TH2F *hist2d_topology = new TH2F("topo", "Topology", nbins,
-                                 0., 50., nbins, -3.14, 3.14);
+                                   0., 50., nbins, -3.14, 3.14);
   hist2d_topology->GetXaxis()->SetTitle("M_{T2}");
   hist2d_topology->GetYaxis()->SetTitle("max[#delta#phi] - #delta#phi(#tau_{1}, #tau_{2})");
 
-  TH2F *hist2d_topology2 = new TH2F("topo2", "Directional Topo", nbins
+  TH2F *hist2d_topology2 = new TH2F("topo2", "Directional Topo", nbins,
                                     -500., 500., nbins, 500., 500.);
   hist2d_topology2->GetXaxis()->SetTitle("p_{T} (#tau#tau) cos(#Delta #phi)");
   hist2d_topology2->GetYaxis()->SetTitle("p_{T} (#tau#tau) sin(#Delta #phi)");
