@@ -1,5 +1,10 @@
 # zprime
 
+#### Paper:
+[Bottom-quark fusion processes at the LHC for probing Z' models and B-meson decay anomalies](https://arxiv.org/pdf/1707.07016.pdf)
+
+#### Macros and Tools:
+
 * DiTauAnalyzer.C	: Delphes TTree macro with some custom functions and an MT2 calculator
 * DiTauGenAnalyzer.C	: LHEF TTree macro with an MT2 calculator
 * GenJetMatcher.C	: Matches Pythia8 `GenParticle` class Truth-level objects with Delphes physics objects.
