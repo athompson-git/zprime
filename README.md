@@ -1,6 +1,6 @@
-# zprime
+# Top-production and Ditau-decay Zprime
 
-#### Paper:
+#### Previous Paper:
 [Bottom-quark fusion processes at the LHC for probing Z' models and B-meson decay anomalies](https://arxiv.org/pdf/1707.07016.pdf)
 
 #### Macros and Tools:
