@@ -1,3 +1,26 @@
+# Installing MadGraph + Pythia8 + Delphes Software Suite
+## MadGraph Installation (Brazos Cluster)
+Login to brazos via
+```ssh <user>@login.brazos.tamu.edu```
+You may install MadGraph in your home directory (`/home/<user>/`). This is the default working directory you end up at after SSH’ing into the cluster.
+Next, go to to <https://launchpad.net/mg5amcnlo>
+On the right hand side, right click on the link for “latest version” and select copy link address. This should be a link such as <https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.3.tar.gz>
+In your terminal on Brazos, call 
+```wget https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.3.tar.gz```
+```tar xvzf MG5_aMC_v2.6.3.tar.gz``` (or whatever version you get)
+At this point there is no need to make/compile MadGraph; its binaries are already compiled.
+The MadGraph5 executable is located in `echo MG5_aMC_v2_6_3/bin/mg5_aMC`
+Copy this path and edit your .bashrc with your favorite editor (vim, nano etc.);
+```vim ~/.bashrc```
+Somewhere towards the bottom of the file add
+```alias mg5='/home/thompson/MG5_aMC_v2_6_3/bin/mg5_aMC’```
+making sure to change the `vX_Y_Z` to the version you grabbed where appropriate.
+Now you can run madgraph in any directory with the command `mg5`.
+
+
+
+
+
 # Top-production and Ditau-decay Zprime
 
 #### Previous Paper:
