@@ -71,6 +71,40 @@ MG5_aMC> install ExRootAnalysis
 ```
 Running each of these install commands will no doubt try to install their various dependencies (hepmc, boost, etc.). Go ahead and agree to these installations. This whole set of installs typically takes 20 minutes to an hour at most.
 
+Next you can try simulating a ttZp sample with pythia and Delphes.
+```
+$ cd ttzp_ditau
+$ ./bin/madevent
+```
+Answer the interactive questions with the numberpad/keypad. Make sure Pythia8 and DELPHES are available and turned on. Also make sure ExRootAnalysis is turned on. Then hit ENTER to continue through the questions until the simulation begins. The beginning of the simulation should look like this:
+```
+INFO: Update the dependent parameter of the param_card.dat
+Generating 10000 events with run name run_01
+survey  run_01
+INFO: compile directory
+```
+
+Then at some point MG5 should finish generating GEN-level events and pass things to Pythia8:
+```
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   1274 +- 2.201 pb
+     Nb of events :  10000
+
+store_events
+INFO: Storing parton level results
+INFO: End Parton
+reweight -from_cards
+decay_events -from_cards
+INFO: Running Pythia8 [arXiv:1410.3012]
+Splitting .lhe event file for PY8 parallelization...
+Submitting Pythia8 jobs...
+```
+and finally, Pythia8 will pass the parton shower to Delphes for detector modelling.
+
+Your finished job should be saved as a ROOT file in
+```ttzp_ditau/Events/run_01/tag_1_delphes_events.root```
+
 
 
 # Top-production and Ditau-decay Zprime
